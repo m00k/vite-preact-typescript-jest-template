@@ -1,5 +1,4 @@
-import { FunctionComponent, h } from 'preact';
-import React from 'preact/compat'; // NOTE: required for fragment <>
+import { FunctionComponent } from 'preact';
 import { Logo } from './logo';
 
 const App: FunctionComponent = () => {
