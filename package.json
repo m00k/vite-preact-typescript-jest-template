@@ -4,13 +4,16 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "preact": "^10.5.13"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.0.0",
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.0",
     "typescript": "^4.3.2",
     "vite": "^2.5.2"
   }
