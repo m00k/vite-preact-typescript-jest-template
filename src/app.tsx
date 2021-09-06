@@ -1,9 +1,9 @@
-import { Logo } from './logo'
+import { FunctionComponent, h } from 'preact';
+import React from 'preact/compat'; // NOTE: required for fragment <>
 
-export function App() {
+const App: FunctionComponent = () => {
   return (
     <>
-      <Logo />
       <p>Hello Vite + Preact!</p>
       <p>
         <a
@@ -18,3 +18,5 @@ export function App() {
     </>
   )
 }
+
+export default App

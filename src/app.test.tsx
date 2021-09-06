@@ -1,6 +1,6 @@
 import { h } from 'preact'
 import { render } from '@testing-library/preact'
-import { App } from './app';
+import App from './app';
 
 
 test('adds 1 + 2 to equal 3', () => {
@@ -10,8 +10,6 @@ test('adds 1 + 2 to equal 3', () => {
 
 test('renders the app', () => {
   const testMessage = 'Learn Preact'
-  const { getByText } = render(
-    <App></App>,
-  )
+  const { getByText } = render(<App />)
   expect(getByText(testMessage)).not.toBeNull()
 })
