@@ -5,3 +5,4 @@
 - npx create-vite my-app -- --template preact-ts
 - npm i -D jest @types/jest @ts-jest
 - npx ts-jest config:init
+- npm i -D @testing-library/preact
