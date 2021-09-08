@@ -1,11 +1,18 @@
 import { FunctionComponent } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import { Logo } from './logo';
 
 const App: FunctionComponent = () => {
+  const [hello, setHello] = useState('Hello Vite')
+  useEffect(() => {
+    const t = setTimeout(() => setHello(curr => `${curr} + Preact!`), 1000)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
     <>
-    <Logo />
-      <p>Hello Vite + Preact!</p>
+      <Logo />
+      <p>{hello}</p>
       <p>
         <a
           class="link"
