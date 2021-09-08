@@ -8,6 +8,6 @@ import preact from '@preact/preset-vite'
 
 export default {
   esbuild: {
-    jsxInject: `import { h } from 'preact'; import React from 'preact/compat'`
+    jsxInject: `import React from 'preact/compat'`
   }
 }
