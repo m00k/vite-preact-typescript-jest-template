@@ -1,0 +1,23 @@
+name: build
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install
+        run: npm ci
+
+      - name: esbuild
+        run: npx esbuild --bundle src/main.tsx --outdir=dist
+
+      - name: build
+        run: npm run build
+
+      - name: test
+        run: npm run test
