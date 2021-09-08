@@ -5,13 +5,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest"
+    "test": "jest --clearCache && jest"
   },
   "dependencies": {
     "preact": "^10.5.13"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.0.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/preact": "^2.0.1",
     "@types/jest": "^27.0.1",
     "jest": "^27.1.0",

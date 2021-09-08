@@ -1,5 +1,7 @@
 import { render } from '@testing-library/preact'
 import App from './app';
+// import React from 'preact/compat'
+// 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
 
 
 test('adds 1 + 2 to equal 3', () => {
