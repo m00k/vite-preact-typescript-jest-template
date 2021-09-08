@@ -17,3 +17,4 @@
 - https://github.com/preactjs/preset-vite/blob/415d882cffa29e1bf2afd715b14774c0ccbd0aa3/src/index.ts
 - https://github.com/alloc/vite-react-jsx
 - https://vitejs.dev/config/#esbuild
+- https://github.com/preactjs/preset-vite/blob/main/src/index.ts
