@@ -1,13 +1,13 @@
-import { /* act, screen, RenderResult */ render, waitFor } from '@testing-library/preact'
+import { /* waitFor, screen, RenderResult */ act, render } from '@testing-library/preact'
 import App from './app';
 
 describe('app', () => {
   beforeEach(() => {
-    // jest.useFakeTimers()
+    jest.useFakeTimers()
   })
 
   afterEach(() => {
-    // jest.useRealTimers()
+    jest.useRealTimers()
   })
 
   test('adds 1 + 2 to equal 3', () => {
@@ -21,12 +21,18 @@ describe('app', () => {
     expect(getByText(testMessage)).not.toBeNull()
   })
   
-  test('renders the app', async () => {
+  test('renders the app', () => {
     const testMessage = 'Hello Vite'
     const testMessage2 = `${testMessage} + Preact!`
     const { getByText } = render(<App />)
     
-    await waitFor(() => expect(getByText(testMessage)).not.toBeNull())
-    await waitFor(() => expect(getByText(testMessage2)).not.toBeNull(), { timeout: 1000 })
+    expect(getByText(testMessage)).not.toBeNull()
+
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
+    
+    // screen.debug()
+    expect(getByText(testMessage2)).not.toBeNull()
   })
 })
