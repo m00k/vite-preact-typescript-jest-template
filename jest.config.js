@@ -1,37 +1,14 @@
-const mappedModules = {
-	'^react/jsx-runtime$': 'preact/jsx-runtime',
-	'^react-dom$': 'preact/compat',
-	'^react$': 'preact/compat',
-  '^react-dom/test-utils$': 'preact/test-utils',
-	// Noop style files
-	'^.+\\.(css|sass|scss|less)$': 'identity-obj-proxy',
-};
-
 module.exports = {
-  // The root of the source code, `<rootDir>` is a token Jest substitutes
-  roots: ["<rootDir>/src/"],
-
-  // The test environment that will be used for testing, jsdom for browser environment
-  testEnvironment: "jsdom",
-
-  // Jest transformations -- this adds support for TypeScript using ts-jest
-  transform: {
-    "^.+\\.tsx?$": "ts-jest",
-  },
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
 
   // Runs special logic, such as cleaning up components
   // when using React Testing Library and adds special
   // extended assertions to Jest
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
-
-  // Ignore cypress e2e test files
-  testPathIgnorePatterns: ["<rootDir>/cypress/"],
+  // setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
 
   // Code coverage config
-  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
-  coverageDirectory: "<rootDir>/coverage/",
-  coveragePathIgnorePatterns: ["<rootDir>/node_modules/", "(.*).d.ts$"],
-
-  // Return proxies object for CSS modules via identity-obj-proxy
-  moduleNameMapper: mappedModules,
-};
+  // collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  // coverageDirectory: "<rootDir>/coverage/",
+  // coveragePathIgnorePatterns: ["<rootDir>/node_modules/", "(.*).d.ts$"],
+}

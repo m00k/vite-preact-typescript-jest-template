@@ -1,3 +1,6 @@
+// NOTE: 
+// needs to be actived in jest.config.js
+
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
