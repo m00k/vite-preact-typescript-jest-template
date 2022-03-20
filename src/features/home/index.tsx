@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { Logo } from './logo';
+import { Logo } from '../../components/logo';
 
-const App: FunctionComponent = () => {
+const Home: FunctionComponent = () => {
   const [hello, setHello] = useState('Hello Vite')
   useEffect(() => {
     const t = setTimeout(() => setHello(curr => `${curr} + Preact!`), 1000)
@@ -27,4 +27,4 @@ const App: FunctionComponent = () => {
   )
 }
 
-export default App
+export default Home

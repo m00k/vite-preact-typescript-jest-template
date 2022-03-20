@@ -1,5 +1,5 @@
 import { /* waitFor, screen, RenderResult */ act, render } from '@testing-library/preact'
-import App from './app';
+import App from '.';
 
 describe('app', () => {
   beforeEach(() => {
