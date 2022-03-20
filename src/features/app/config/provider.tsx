@@ -5,20 +5,21 @@ import { useContext } from 'preact/hooks'
 
 export type AppConfigContext = AppConfig
 const AppConfigContext: PreactContext<AppConfigContext> =
-    createContext<AppConfigContext>({} as AppConfig)
+  createContext<AppConfigContext>({} as AppConfig)
 
 export const AppConfigProvider = ({
-    value,
-    children,
+  value,
+  children,
 }: {
-    value?: AppConfig,
-    children?: ComponentChildren
+  value?: AppConfig
+  children?: ComponentChildren
 }) => {
-    return (
-        <AppConfigContext.Provider value={value || appConfig}>
-            {children}
-        </AppConfigContext.Provider>
-    )
+  return (
+    <AppConfigContext.Provider value={value || appConfig}>
+      {children}
+    </AppConfigContext.Provider>
+  )
 }
 
-export const useAppConfig = (): AppConfigContext => useContext<AppConfigContext>(AppConfigContext)
+export const useAppConfig = (): AppConfigContext =>
+  useContext<AppConfigContext>(AppConfigContext)

@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest --clearCache && jest"
+    "test": "jest --clearCache && jest",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write ./src"
   },
   "dependencies": {
     "preact": "^10.5.13"
@@ -15,7 +17,15 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/preact": "^2.0.1",
     "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.1.0",
+    "prettier": "^2.6.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.3.2",
     "vite": "^2.5.2"

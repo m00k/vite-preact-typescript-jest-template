@@ -1,10 +1,8 @@
-import { FunctionComponent } from 'preact';
-import HomePage from '../../pages/home';
+import { FunctionComponent } from 'preact'
+import HomePage from '../../pages/home'
 
 const App: FunctionComponent = () => {
-  return (
-      <HomePage />
-  )
+  return <HomePage />
 }
 
 export default App

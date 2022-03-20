@@ -1,4 +1,4 @@
-// NOTE: 
+// NOTE:
 // needs to be actived in jest.config.js
 
 // jest-dom adds custom jest matchers for asserting on DOM nodes.

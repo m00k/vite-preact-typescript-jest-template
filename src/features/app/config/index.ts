@@ -3,14 +3,14 @@
 // when using import.meta.env directly (as per https://vitejs.dev/guide/env-and-mode.html#env-files)
 // -> consider creating a AppConfigTestContext.Provider or utilizing jest.mock('./path/to/config.ts') when testing
 
-import { mapViteEnvVars } from "./mapper"
+import { mapViteEnvVars } from './mapper'
 
 export interface AppConfig extends ImportMetaEnv {
-    readonly GREETER_DELAY: string
+  readonly GREETER_DELAY: string
 }
 
 export interface ImportMetaEnvVite extends ImportMetaEnv {
-    readonly VITE_GREETER_DELAY: string
+  readonly VITE_GREETER_DELAY: string
 }
 
 const config = mapViteEnvVars(import.meta.env as ImportMetaEnvVite)

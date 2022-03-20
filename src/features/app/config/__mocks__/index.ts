@@ -1,3 +1,3 @@
 export default {
-    GREETER_DELAY: '1000'
+  GREETER_DELAY: '1000',
 }
