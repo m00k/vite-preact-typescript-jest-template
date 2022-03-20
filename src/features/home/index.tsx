@@ -1,11 +1,14 @@
 import { FunctionComponent } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { Logo } from '../../components/logo';
+import { useAppConfig } from '../app/config/provider';
 
 const Home: FunctionComponent = () => {
   const [hello, setHello] = useState('Hello Vite')
+  const { GREETER_DELAY } = useAppConfig()
+
   useEffect(() => {
-    const t = setTimeout(() => setHello(curr => `${curr} + Preact!`), 1000)
+    const t = setTimeout(() => setHello(curr => `${curr} + Preact!`), +GREETER_DELAY!)
     return () => clearTimeout(t)
   }, [])
 
