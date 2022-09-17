@@ -10,6 +10,7 @@
     "format": "prettier --write ./src"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^29.0.3",
     "preact": "^10.11.0"
   },
   "devDependencies": {
